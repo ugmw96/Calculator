@@ -2,6 +2,7 @@ import Display from "./components/Display";
 import { CalButton, CalButtonBox } from "./components/Styles/componentsStyls";
 import Button from "./components/Button";
 import Wrapper from "./components/Wrapper";
+import '../src/components/Styles/styles.css';
 
 function App() {
   const ButtonVals =[ 
@@ -18,7 +19,7 @@ function App() {
           {
             ButtonVals.flat().map((btn,i) => {
               return (
-                <Button key={i} value={btn} onClick={() => {
+                <Button key={i} value={btn} className={btn === "=" ? "equals" : "button" } onClick={() => {
                   console.log(`${btn} clicked`);
                 }}/>
               )
